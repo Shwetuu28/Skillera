@@ -1,61 +1,94 @@
-# `skillera`
+# 🚀 Skillera — AI-Powered Career & Skill Navigator on ICP
 
-Welcome to your new `skillera` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Skillera is a decentralized AI-powered platform tackling youth unemployment, skill mismatch, and lack of guidance by offering smart career recommendations, personalized skill pathways, mental health support, and policy-level insights for institutions — all while ensuring user privacy on the Internet Computer. 🌍🧠📊
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+---
 
-To learn more before you start working with `skillera`, see the following documentation available online:
+## 🧠 Key Problem
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Rust Canister Development Guide](https://internetcomputer.org/docs/current/developer-docs/backend/rust/)
-- [ic-cdk](https://docs.rs/ic-cdk)
-- [ic-cdk-macros](https://docs.rs/ic-cdk-macros)
-- [Candid Introduction](https://internetcomputer.org/docs/current/developer-docs/backend/candid/)
+-💼 Youth Unemployment Crisis
+Millions of students graduate each year without clear career direction or employable skills, leading to rising joblessness.
+-🧠 Skill Mismatch
+Learners often pursue courses that don’t align with market demand, resulting in wasted potential and unemployability.
+-🧭 Lack of Career Guidance Tools
+There’s a serious shortage of accessible, AI-driven tools that offer personalized career mentoring based on data.
+-📉 No Real-time Institutional Insights
+Governments and universities lack systems to track evolving skill gaps or guide youth policy decisions effectively.
+-🫥 Mental Burnout & Demotivation
+Students face anxiety and demotivation due to unclear futures and peer pressure, with no personalized support.
+-🛡 Centralized Data Exploitation
+Most platforms store personal data on centralized servers, risking privacy and trust.
 
-If you want to start working on your project right away, you might want to try the following commands:
+---
+
+## ✨ Features added
+
+-🧠 End-to-end ICP dApp using Motoko + JS frontend
+-🎨 Beautifully designed UI with motivational UX elements
+-🛠 Canister-based backend managing user routing and data flow
+-🧭 Seamless user journey from questions → skill map → insights
+-📋 Modular questionnaire system for profiling skills and interests
+-🧩 Skill inference engine structured with smart prompt logic
+-🤖 Placeholder functions for AI Mentor, Skill Gap Analysis, and Job Forecasting (AI not yet integrated)
+-🚀 Fully working local deployment with dfx and proper dfx.json setup
+-🔐 Privacy-first system — no third-party data sharing
+-💅 UX polish + light motivational nudges to retain user engagemen
+
+---
+
+## 🛠 Future Updates & Features
+
+-🤖 Integration of real AI models into Mentor, Skill Gap & Forecast tools
+-🌐 Mainnet deployment on the Internet Computer
+-📊 Smart admin analytics dashboard for institutions & policymakers
+-📚 ML-powered recommendation engine for deeper skill matching
+-🧑‍🎓 University/government portal for unemployment mapping + curriculum recommendations
+-🧘 AI-powered mental health & motivation assistant
+-🪪 NFT-based verifiable skill certificates
+-🔗 Web3 login + decentralized user profile storage
+-📱 Fully mobile-responsive, PWA-ready UI
+-🏆 Gamified journey with progress tracking and reward
+
+---
+
+## 🧰 Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| Backend | **Motoko**, DFINITY Canisters |
+| Frontend | HTML, CSS, Vanilla JavaScript, Bootstrap |
+| Dev Tools | DFX, Vite, ICP SDK |
+| Hosting | Localhost (currently), planned for Mainnet |
+
+---
+
+## 🛠️ Setup Instructions
+
+Make sure you have [DFINITY SDK](https://internetcomputer.org/docs/current/developer-docs/sdk-guide/install/) installed.
 
 ```bash
-cd skillera/
-dfx help
-dfx canister --help
-```
+# Clone the repository
+git clone https://github.com/Shwetuu28/Skillera.git
+cd Skillera
 
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
+# Start local IC replica
 dfx start --background
 
-# Deploys your canisters to the replica and generates your candid interface
+# Deploy canisters
 dfx deploy
+
+# Launch frontend in browser
+xdg-open "http://127.0.0.1:4943/?canisterId=$(dfx canister id frontend)"
+
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+## Canister ID 
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+# Local:
+http://uxrrr-q7777-77774-qaaaq-cai.localhost:4943/
 
-```bash
-npm run generate
-```
+# Mainnet:
+Coming soon
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+---
 
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
