@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Mentor | Skillera</title>
+    <base href="./">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="career-body">
+    <header class="career-header">
+        <div class="career-logo">
+            <h1>Skillera: Career Mentor</h1>
+        </div>
+        <nav class="career-navbar">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="skill-gap.html">Skill Gap</a>
+            <a href="job-forecast.html">Job Forecast</a>
+        </nav>
+    </header>
+
+    <main class="career-main">
+        <section class="career-section">
+            <h2>Get Personalized Career Advice</h2>
+            <p>Enter your career goals, interests, or skills you'd like to explore:</p>
+
+            <textarea id="careerInput" placeholder="e.g., I want to become a data scientist or game developer..." rows="5"></textarea>
+            <button onclick="generateCareerAdvice()">Get AI Career Guidance</button>
+
+            <div id="careerOutput" class="career-output"></div>
+        </section>
+    </main>
+
+    <footer class="career-footer">
+        <p>&copy; 2025 Skillera. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function generateCareerAdvice() {
+            const input = document.getElementById('careerInput').value.trim();
+            const outputBox = document.getElementById('careerOutput');
+
+            if (!input) {
+                outputBox.innerHTML = "<p>Please enter your goals or interests to receive guidance.</p>";
+                return;
+            }
+
+            outputBox.innerHTML = `
+                <h3>Suggested Path:</h3>
+                <ul>
+                    <li><strong>Ideal Roles:</strong> Data Analyst, AI Developer</li>
+                    <li><strong>Recommended Skills:</strong> Python, ML, Statistics, SQL</li>
+                    <li><strong>Learning Resources:</strong> Coursera ML by Andrew Ng, Kaggle Competitions</li>
+                    <li><strong>Next Steps:</strong> Build projects, publish on GitHub, create LinkedIn profile</li>
+                </ul>
+                <p><em>(Note: This is a static suggestion. AI-powered responses coming soon!)</em></p>
+            `;
+        }
+    </script>
+</body>
+</html>

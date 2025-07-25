@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <base href="./">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Login - Skillera</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🚀 Skillera</h1>
+      <nav class="sign">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="dashboard.html">Dashboard</a> 
+      </nav>
+    </div>
+  </header>
+
+  <main class="ii-login-container">
+    <section class="ii-login-box">
+      <h2>Sign in to Skillera</h2>
+      <p class="ii-description">Use your Internet Identity to securely log in</p>
+      <button class="ii-login-btn" onclick="login()">Login with Internet Identity</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Skillera. All rights reserved.</p>
+  </footer>
+
+  <!-- Identity JS logic -->
+  <script type="module">
+    import { AuthClient } from 'https://cdn.jsdelivr.net/npm/@dfinity/auth-client/+esm';
+
+    async function login() {
+      const authClient = await AuthClient.create();
+      await authClient.login({
+        identityProvider: "https://identity.ic0.app/#authorize",
+        onSuccess: async () => {
+          const identity = await authClient.getIdentity();
+          console.log("Login successful:", identity);
+          window.location.href = "dashboard.html"; // Redirect after login
+        }
+      });
+    }
+  </script>
+</body>
+</html>

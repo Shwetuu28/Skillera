@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skillera | Job Forecast</title>
+  <base href="./">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="forecast-header">
+    <div class="logo">
+      <h1><a href="dashboard.html">Skillera</a></h1>
+    </div>
+    <nav class="forecast-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="career-mentor.html">Career Mentor</a>
+      <a href="skill-gap.html">Skill Gap</a>
+    </nav>
+  </header>
+
+  <main class="forecast-container">
+    <section class="forecast-intro">
+      <h2>🔮 AI Job Forecast 2025+</h2>
+      <p>Explore AI-predicted future roles based on your city and domain. Note: These are static predictions for demo purposes. AI-enhanced live forecasts coming soon!</p>
+    </section>
+
+    <section class="forecast-form-section">
+      <form id="forecast-form" class="forecast-form">
+        <div class="form-group">
+          <label for="city">📍 Select Your City:</label>
+          <select id="city" name="city" required>
+            <option value="" disabled selected>Select your city</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="delhi">Delhi</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="pune">Pune</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="domain">💼 Choose a Domain:</label>
+          <select id="domain" name="domain" required>
+            <option value="" disabled selected>Select domain</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="data-science">Data Science</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="web-dev">Web Development</option>
+            <option value="game-dev">Game Development</option>
+            <option value="cloud">Cloud Computing</option>
+            <option value="digital-marketing">Digital Marketing</option>
+          </select>
+        </div>
+
+        <button type="submit" class="forecast-btn">Predict Future Jobs</button>
+      </form>
+    </section>
+
+    <section id="forecast-result" class="forecast-result hidden">
+      <h3>📌 Top Predicted Roles</h3>
+      <ul id="role-list" class="forecast-role-list"></ul>
+    </section>
+  </main>
+
+  <footer class="forecast-footer">
+    <p>© 2025 Skillera | Empowering the Future Workforce</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('forecast-form');
+    const resultSection = document.getElementById('forecast-result');
+    const roleList = document.getElementById('role-list');
+
+    const predictions = {
+      "mumbai-ai": ["AI Solutions Architect", "AI Policy Analyst", "Ethical AI Developer"],
+      "bangalore-web-dev": ["Web3 Frontend Developer", "Performance UX Engineer", "Full-stack AI Developer"],
+      "delhi-cybersecurity": ["Zero Trust Security Engineer", "Threat Intelligence Analyst", "SOC Automation Lead"],
+      "pune-data-science": ["Data Product Manager", "Explainable AI Engineer", "AI Ops Analyst"],
+      "hyderabad-game-dev": ["AI Game Designer", "Multiplayer Network Engineer", "XR Interaction Developer"]
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const city = document.getElementById('city').value;
+      const domain = document.getElementById('domain').value;
+      const key = `${city}-${domain}`;
+
+      roleList.innerHTML = "";
+      if (predictions[key]) {
+        predictions[key].forEach(role => {
+          const li = document.createElement('li');
+          li.textContent = role;
+          roleList.appendChild(li);
+        });
+      } else {
+        const li = document.createElement('li');
+        li.textContent = "Predictions not available for this combination yet. Please try another.";
+        roleList.appendChild(li);
+      }
+
+      resultSection.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "dfx": "0.27.0",
+  "canisters": {
+    "skillera": {
+      "type": "motoko",
+      "main": "backend/app.mo"
+    },
+    "frontend": {
+      "type": "assets",
+      "source":[ "frontend"]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Gap Analysis | Skillera</title>
+  <base href="./">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="sgap-body">
+
+  <!-- Navbar -->
+  <header class="sgap-header">
+    <div class="sgap-logo">
+      <h1><a href="dashboard.html">Skillera</a></h1>
+    </div>
+    <nav class="sgap-navbar">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="career-mentor.html">Career Mentor</a>
+      <a href="job-forecast.html">Job Forecast</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="sgap-main">
+    <section class="sgap-container">
+      <h2>🎯 Skill Gap Analysis</h2>
+      <p>Find out which skills you need to learn to reach your dream career. <br><em>(Note: Current results are not fully AI-generated. AI integration coming soon.)</em></p>
+
+      <form id="skill-gap-form">
+        <!-- Current Skills -->
+        <div class="sgap-form-group">
+          <label for="currentSkills">🧠 Your Current Skills</label>
+          <textarea id="currentSkills" name="currentSkills" rows="3" placeholder="E.g., HTML, CSS, Python"></textarea>
+        </div>
+
+        <!-- Career Goal Selection (Dropdown) -->
+        <div class="sgap-form-group">
+          <label for="careerGoal">🚀 Select Your Career Goal</label>
+          <select id="careerGoal" name="careerGoal">
+            <optgroup label="Tech & Development">
+              <option>Full-Stack Developer</option>
+              <option>Front-End Developer</option>
+              <option>Backend Developer</option>
+              <option>AI/ML Engineer</option>
+              <option>Game Developer</option>
+              <option>Cybersecurity Expert</option>
+              <option>Cloud Engineer</option>
+            </optgroup>
+            <optgroup label="Data & Business">
+              <option>Data Scientist</option>
+              <option>Data Analyst</option>
+              <option>Business Analyst</option>
+              <option>Product Manager</option>
+            </optgroup>
+            <optgroup label="Creative & Design">
+              <option>UI/UX Designer</option>
+              <option>Digital Marketer</option>
+              <option>Content Strategist</option>
+            </optgroup>
+            <optgroup label="Academic & Research">
+              <option>Researcher</option>
+              <option>Professor/Lecturer</option>
+              <option>Government Aspirant</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>Entrepreneur</option>
+              <option>Freelancer</option>
+              <option>I’m not sure yet (Let Skillera Suggest)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- Custom Goal -->
+        <div class="sgap-form-group">
+          <label for="customGoal">✍️ Or write your own career goal (optional):</label>
+          <input type="text" id="customGoal" name="customGoal" placeholder="E.g., Robotics Engineer, Tech Lead...">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Analyze Skill Gap</button>
+      </form>
+
+      <!-- Result Display -->
+      <section id="result" class="sgap-result" style="display:none;">
+        <h3>🔍 Skill Gap Analysis Result</h3>
+        <p><strong>Current Skills:</strong> <span id="userSkillsOutput"></span></p>
+        <p><strong>Target Career:</strong> <span id="targetCareerOutput"></span></p>
+        <p><strong>Required Skills:</strong> <span id="requiredSkillsOutput"></span></p>
+        <p><strong>Missing Skills (Gap):</strong> <span id="gapSkillsOutput"></span></p>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sgap-footer">
+    <p>&copy; 2025 Skillera. Empowering careers with AI.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('skill-gap-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const currentSkills = document.getElementById('currentSkills').value.trim();
+      const selectedGoal = document.getElementById('careerGoal').value;
+      const customGoal = document.getElementById('customGoal').value.trim();
+
+      const careerGoal = customGoal || selectedGoal;
+
+      document.getElementById('userSkillsOutput').textContent = currentSkills || "None";
+      document.getElementById('targetCareerOutput').textContent = careerGoal || "Not specified";
+
+      // Placeholder for AI logic
+      document.getElementById('requiredSkillsOutput').textContent = "AI, Data Structures, Communication, Problem Solving";
+      document.getElementById('gapSkillsOutput').textContent = "AI, Data Structures";
+
+      result.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

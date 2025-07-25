@@ -1,0 +1,760 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.hero-header {
+  background-color: #1e2a78;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.landing-main {
+  padding: 3rem 2rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #1e2a78;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.cta-btn {
+  background-color: #1e2a78;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #14205b;
+}
+
+.hero-img img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.features {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 1.8rem;
+  color: #1e2a78;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #1e2a78;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 3rem;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4c66ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card a.disabled {
+  pointer-events: none;
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* ========== About Page Styles ========== */
+/* ========== ABOUT PAGE ========== */
+.about-main {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+  min-height: 100vh;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.about-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about-container h1 .highlight {
+  color: #6c5ce7; /* Matches homepage CTA color */
+}
+
+.about-container h2 {
+  color: #1e2a78;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-container ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-container ul li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+  color: #444;
+}
+
+/* === Internet Identity Sign In Styling === */
+   .ii-login-container
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 75vh;
+      background: #1e2a78;
+    }
+
+    .ii-login-box 
+    {
+      background: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .ii-login-box h2 {
+      color: #2d2e83;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .ii-description {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    .ii-login-btn {
+      background-color: #2d2e83;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .ii-login-btn:hover {
+      background-color: #1b1c6a;
+    }
+
+    .header {
+     background-color: #1e2a78;
+     color: #fff;
+     padding: 20px 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav.sign a {
+  color: #2d2e83;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav.sign a:hover {
+  color: #ffd700;
+}
+
+/* ===== Dashboard Styles ===== */
+.dashboard-body {
+  background-color: #1e2a78;
+  color: #f0f4ff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-header {
+  background: #1e2a78;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d3350;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  color: #98c1fe;
+  margin: 0;
+}
+
+.dashboard-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-nav a {
+  color: #d5e1ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+  background-color: #2b375a;
+  color: #ffffff;
+}
+
+.dashboard-main {
+  padding: 40px 30px;
+}
+
+.dashboard-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-intro h2 {
+  font-size: 2rem;
+  color: #1e2a78;
+}
+
+.dashboard-intro p {
+  font-size: 1.1rem;
+  color: #1e2a78;
+  max-width: 700px;
+  margin: 10px auto 0;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+}
+
+.dashboard-card {
+  background: #1e2a78;
+  border: 1px solid #2e375c;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(72, 118, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(72, 118, 255, 0.3);
+}
+
+.dashboard-card h3 {
+  font-size: 1.3rem;
+  color: #82aaff;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  color: #d2d9f7;
+  margin-bottom: 15px;
+  min-height: 50px;
+}
+
+.dashboard-card a {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #4e6eff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.dashboard-card a:hover {
+  background-color: #3d5ce7;
+}
+
+.dashboard-card.disabled a {
+  background-color: #5b5f77;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 20px;
+  color: #9098c2;
+  border-top: 1px solid #2e375c;
+  background-color: #10142c;
+  font-size: 0.9rem;
+}
+
+/* Career Mentor Page Styles */
+.career-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f8fc;
+    color: #2d2e83;
+    margin: 0;
+    padding: 0;
+}
+
+.career-header {
+    background-color: #1e2a78;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.career-logo h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.career-navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.career-navbar a:hover,
+.career-navbar a.active {
+    color: #ffd700;
+}
+
+.career-main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.career-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.career-section h2 {
+    color: #2d2e83;
+    margin-bottom: 15px;
+}
+
+.career-section textarea {
+    width: 100%;
+    border: 2px solid #2d2e83;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.career-section button {
+    background-color: #2d2e83;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.career-section button:hover {
+    background-color: #1d1e6f;
+}
+
+.career-output {
+    margin-top: 25px;
+    background-color: #f1f3ff;
+    padding: 20px;
+    border-left: 5px solid #2d2e83;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.career-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Skill Gap Page Styles */
+.sgap-body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fc;
+  color: #2d2e83;
+  margin: 0;
+  padding: 0;
+}
+
+.sgap-header {
+  background-color: #1e2a78;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sgap-logo h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.sgap-navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sgap-navbar a:hover,
+.sgap-navbar a.active {
+  color: #ffd700;
+}
+
+.sgap-main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.sgap-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.sgap-container h2 {
+  margin-bottom: 10px;
+}
+
+.sgap-form-group {
+  margin-bottom: 20px;
+}
+
+.sgap-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.sgap-form-group textarea,
+.sgap-form-group input,
+.sgap-form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #2d2e83;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.sgap-form-group input[type="text"] {
+  margin-top: 5px;
+}
+
+.sgap-container button {
+  background-color: #2d2e83;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sgap-container button:hover {
+  background-color: #1c1d6a;
+}
+
+.sgap-result {
+  margin-top: 30px;
+  background-color: #eef0ff;
+  padding: 20px;
+  border-left: 5px solid #2d2e83;
+  border-radius: 8px;
+}
+
+.sgap-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ========== JOB FORECAST PAGE STYLES ========== */
+.forecast-header {
+  background-color: #2d2e83;
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-header .logo h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.forecast-nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forecast-nav a:hover,
+.forecast-nav a.active {
+  color: #ffd700;
+}
+
+.forecast-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.forecast-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.forecast-intro h2 {
+  color: #2d2e83;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-form-section {
+  background-color: #f9f9ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(45, 46, 131, 0.1);
+  margin-bottom: 2rem;
+}
+
+.forecast-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.forecast-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2d2e83;
+}
+
+.forecast-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.forecast-btn {
+  background-color: #2d2e83;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.forecast-btn:hover {
+  background-color: #1f1f66;
+}
+
+.forecast-result {
+  background-color: #fff8dc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ffd700;
+}
+
+.forecast-role-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.forecast-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: #2d2e83;
+  color: white;
+}
