@@ -4,6 +4,11 @@ Skillera is a decentralized AI-powered platform tackling youth unemployment, ski
 
 ---
 
+📊 Pitch Deck: [Click here to view Skillera Pitch Deck]
+
+https://docs.google.com/presentation/d/1eAXA0H12h3xtbZW09_eZF_PAucUFeoGM/edit?usp=drive_link&ouid=110996844946431834121&rtpof=true&sd=true
+
+---
 ## 🧠 Key Problem
 
 -💼 Youth Unemployment Crisis
